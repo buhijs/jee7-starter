@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <meta charset="UTF-8"/>
+    <title>JSF Registration App</title>
+
+</h:head>
+<h:body>
+    <h1>JSF Registration App</h1>
+
+    <h:form>
+    <h:outputLabel id="lblFirstName" for="txtFirstName"
+                   value="First Name" />
+        <h:inputText id="txtFirstName" value="#{personController.firstName}"/><br />
+    <h:outputLabel id="lblLastName" for="txtLastName"
+                   value="Last Name" />
+        <h:inputText id="txtLastName" value="#{personController.lastName}"/><br />
+    <h:outputLabel id="lblGender" for="#{personController.gender}"
+                   value="Gender" />
+        <h:selectOneRadio value="#{personController.gender}">
+            <f:selectItem itemValue="M" itemLabel="Male"/>
+            <f:selectItem itemValue="F" itemLabel="Female"/>
+        </h:selectOneRadio><br />
+    <h:outputLabel id="lblDateOfBirth" for="dateOfBirth"
+                   value="Date of birth" />
+    <h:inputText id="dateOfBirth" value="#{personController.dateOfBirth}"/><br />
+    <h:outputLabel id="lblEmail" for="email"
+                   value="Email" />
+    <h:inputText id="email" value="#{personController.email}"/><br />
+    <h:outputLabel id="lblservicelevel" for="#{personController.serviceLevel}"
+                   value="Serivce lvl" />
+    <h:selectOneMenu value="#{personController.serviceLevel}">
+        <f:selectItem itemValue="Basic"  itemLabel="Basic"/>
+        <f:selectItem itemValue="blabla"  itemLabel="blabla"/>
+    </h:selectOneMenu><br />
+    <h:outputLabel id="lblPhone" for="phnenr"
+                   value="Phone nr" />
+    <h:inputText id="phnenr" value="#{personController.phoneNr}"/><br />
+    <h:outputLabel id="lblAccountnr" for="accountnr"
+                   value="Accout nr" />
+    <h:inputText id="accountnr" value="#{personController.accountNr}"/><br />
+
+    <h:commandButton value="RegisterPerson"
+                     action="#{personController.savePerson()}" />
+
+    </h:form>
+</h:body>
+</html>

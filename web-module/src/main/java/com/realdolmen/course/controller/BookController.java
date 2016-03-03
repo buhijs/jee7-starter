@@ -21,4 +21,8 @@ public class BookController {
     public void remove(int bookId) {
         repository.remove(bookId);
     }
+
+    public Book findById(Integer id) {
+        return repository.findById(id);
+    }
 }
