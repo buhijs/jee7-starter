@@ -1,7 +1,7 @@
 JEE7 Starter
 ============
 
-[![Build Status](https://travis-ci.org/kvanrobbroeck/jee7-starter.svg?branch=master)](https://travis-ci.org/kvanrobbroeck/jee7-starter)
+[![Build Status](https://travis-ci.org/nicolasquartier/jee7-starter.svg?branch=master)](https://travis-ci.org/nicolasquartier/jee7-starter)
 
 This project serves as a demo/template for JEE6 and JEE7 development. It is used as a starting point for the following
 RealDolmen courses:
