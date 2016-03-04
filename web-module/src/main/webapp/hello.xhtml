@@ -81,24 +81,12 @@
 
             document.body.style.backgroundColor = "rgba(" + r + "," + g + "," + b + ", 100)";
             window.setTimeout(changeColor, 25);
-
-            /*if(document.body.style.backgroundColor == "blueviolet") {
-                document.body.style.backgroundColor = "yellow";
-                document.getElementById("outputText").style.backgroundColor = "blueviolet";
-                window.setTimeout(changeColor,500);
-            }
-            else {
-                document.body.style.backgroundColor = "blueviolet";
-                document.getElementById("outputText").style.backgroundColor = "yellow";
-                window.setTimeout(changeColor, 500);
-            }*/
         }
     </script>
 </h:head>
 <h:body>
-    <h1>Hello! #{registrationBean.firstName} #{registrationBean.lastName}</h1>
+    <h1>Hello! It's me... <br />#{registrationBean.firstName} #{registrationBean.lastName}</h1>
     <p>#{5 * 8}</p>
-    <p>This is the title of book with id = 2000: #{registrationBean.findBookNameById(2000)}</p>
 
     <h:outputText id="outputText" value="I want an alert here! and this is 5 * 8 = #{5*8}" styleClass="underline" style="color:firebrick;"></h:outputText>
 

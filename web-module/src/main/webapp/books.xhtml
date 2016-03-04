@@ -5,13 +5,16 @@
         xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
         xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
+        <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
         <meta charset="UTF-8"/>
         <title>Books</title>
+        <h:outputStylesheet library="bootstrap" name="css/bootstrap.css"/>
+        <h:outputScript library="bootstrap" name="js/bootstrap.js"/>
     </h:head>
-    <h:body>
+    <h:body styleClass="container">
         <h1>Books</h1>
         <p>A list of books.</p>
-        <h:dataTable id="books" value="#{bookController.allBooks}" var="book">
+        <h:dataTable id="books" value="#{bookController.allBooks}" var="book" styleClass="table table-bordered table-striped">
             <h:column>
                 <f:facet name="header">
                     <h:outputText value="Id"/>
@@ -38,7 +41,7 @@
             </h:column>
             <h:column>
                 <h:form>
-                    <h:commandLink value="Remove">
+                    <h:commandLink value="Remove" styleClass="btn btn-danger">
                         <f:ajax render="books" event="click" listener="#{bookController.remove(book.id)}"/>
                     </h:commandLink>
                 </h:form>

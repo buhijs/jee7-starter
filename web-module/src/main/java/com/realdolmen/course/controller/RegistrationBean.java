@@ -36,6 +36,8 @@ public class RegistrationBean implements Serializable{
     @PostConstruct
     public void init() {
         l.info("init Properties");
+        this.firstName = "Nicolas";
+        this.lastName = "Quartier";
     }
 
     public void setL(Logger l) {
